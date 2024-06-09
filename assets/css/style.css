@@ -1,0 +1,197 @@
+body {
+    color: var(--base-color);
+    font-weight: 400;
+    line-height: 30px;
+    font-size: 16px;
+    font-family: var(--base-font);
+    --base-font: 'Inter', sans-serif;
+    --heading-font: 'Work Sans', sans-serif;
+    --primary-color: #0055FF;
+    --secondary-color: #FEC458;
+    --heading-color: #a73b3b;
+    --base-color: #696969;
+    --lighter-color: #F1F5FF;
+    --navyblue-color: #00194C;
+    --border-color: rgba(1, 13, 9, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.lp {
+    --primary-color: #0095FF;
+}
+
+h1, .h1 {
+    line-height: 1.1;
+    font-size: 45px;
+}
+
+h4, .h4 {
+    line-height: 1.4;
+    font-size: 24px;
+}
+
+.page-wrapper {
+    position: relative;
+    z-index: 9;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    min-width: 300px;
+}
+
+.one-page {
+    z-index: 1;
+    overflow: hidden;
+    position: relative;
+}
+
+.pb-140, .py-140 {
+    padding-bottom: 140px;
+}
+
+.pt-140, .py-140 {
+    padding-top: 140px;
+}
+
+.bgc-black {
+    background-color: var(--heading-color);
+}
+
+.bgp-bottom {
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+
+img {
+    max-width: 100%;
+    display: inline-block;
+}
+
+@media only screen and (min-width: 1200px) {
+    .container {
+        max-width: 1320px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+.z-1 {
+    z-index: 1;
+}
+.rel {
+    position: relative;
+}
+
+.lp-content h1 {
+    margin-bottom: 32px;
+    letter-spacing: -2.2px;
+}
+
+@media only screen and (min-width: 480px) {
+    .lp-content.style-two p {
+        font-size: 18px;
+    }
+}
+
+.lp-content.style-two p {
+    line-height: 1.95;
+    margin-bottom: 42px;
+}
+
+.lp-content.style-two h1 span {
+    line-height: 1;
+    display: inline-block;
+    color: var(--heading-color);
+    padding: 0 8px 10px 5px;
+    background: var(--secondary-color);
+}
+
+.lp-form h4 {
+    margin-bottom: 0;
+    margin-top: -8px;
+}
+
+.lp-form-bg {
+    width: 90%;
+    z-index: -1;
+    position: absolute;
+    left: 18%;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.lp-form p {
+    margin-bottom: 26px;
+}
+
+.lp-form {
+    padding: 60px;
+    background: white;
+    border-radius: 20px;
+    -webkit-box-shadow: 0px 10px 60px 0px rgba(155, 155, 155, 0.2);
+    box-shadow: 0px 10px 60px 0px rgba(155, 155, 155, 0.2);
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+input, select, textarea, .nice-select, .form-control {
+    width: 100%;
+    height: auto;
+    font-weight: 500;
+    padding: 20px 30px;
+    border-radius: 15px;
+    font-family: var(--heading-font);
+    background: var(--lighter-color);
+    border: 1px solid var(--lighter-color);
+}
+
+.theme-btn, a.theme-btn {
+    color: white;
+    cursor: pointer;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    padding: 13px 45px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-radius: 20px;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    font-family: var(--heading-font);
+    text-transform: capitalize;
+    background-size: 202% 202%;
+    background-position: 100% 100%;
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(50%, var(--primary-color)), color-stop(50%, var(--heading-color)));
+    background-image: -webkit-linear-gradient(bottom, var(--primary-color) 50%, var(--heading-color) 50%);
+    background-image: -o-linear-gradient(bottom, var(--primary-color) 50%, var(--heading-color) 50%);
+    background-image: linear-gradient(to top, var(--primary-color) 50%, var(--heading-color) 50%);
+}
+
+.theme-btn i, a.theme-btn i {
+    margin-left: 9px;
+    font-size: 0.8em;
+    -webkit-transform: rotate(-30deg);
+    -ms-transform: rotate(-30deg);
+    transform: rotate(-30deg);
+}
