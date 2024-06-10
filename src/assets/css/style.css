@@ -6,9 +6,9 @@ body {
     font-family: var(--base-font);
     --base-font: 'Inter', sans-serif;
     --heading-font: 'Work Sans', sans-serif;
-    --primary-color: #0055FF;
-    --secondary-color: #FEC458;
-    --heading-color: #a73b3b;
+    --primary-color: #ba713e;
+    --secondary-color: #cd9268;
+    --heading-color: #bc7240;
     --base-color: #696969;
     --lighter-color: #F1F5FF;
     --navyblue-color: #00194C;
@@ -55,6 +55,14 @@ h4, .h4 {
 
 .pb-140, .py-140 {
     padding-bottom: 140px;
+}
+
+.mb-50 {
+    margin-bottom: 50px;
+}
+
+.pt-100, .py-100 {
+    padding-top: 100px;
 }
 
 .pt-140, .py-140 {
@@ -182,10 +190,7 @@ input, select, textarea, .nice-select, .form-control {
     text-transform: capitalize;
     background-size: 202% 202%;
     background-position: 100% 100%;
-    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(50%, var(--primary-color)), color-stop(50%, var(--heading-color)));
-    background-image: -webkit-linear-gradient(bottom, var(--primary-color) 50%, var(--heading-color) 50%);
-    background-image: -o-linear-gradient(bottom, var(--primary-color) 50%, var(--heading-color) 50%);
-    background-image: linear-gradient(to top, var(--primary-color) 50%, var(--heading-color) 50%);
+    background-color: var(--heading-color);
 }
 
 .theme-btn i, a.theme-btn i {
@@ -194,4 +199,72 @@ input, select, textarea, .nice-select, .form-control {
     -webkit-transform: rotate(-30deg);
     -ms-transform: rotate(-30deg);
     transform: rotate(-30deg);
+}
+
+.section-two {
+    --primary-color: #e5d8cf;
+}
+
+.pb-90, .py-90 {
+    padding-bottom: 90px;
+}
+.pt-120, .py-120 {
+    padding-top: 120px;
+}
+
+.z-2 {
+    z-index: 2;
+}
+
+.section-title h2 {
+    margin-bottom: 20px;
+    letter-spacing: -1.44px;
+}
+
+h2, .h2, .counter-item-two .count-text, .pricing-item .price {
+    line-height: 1.15;
+    font-size: 48px;
+}
+
+.section-title h2 span {
+    color: var(--primary-color);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding: 0 15px 15px;
+    margin: 0 -15px;
+}
+
+.main-footer.footer-two {
+    z-index: 1;
+    position: relative;
+    background-color: var(--heading-color);
+    color: rgba(255, 255, 255, 0.45);
+}
+
+.main-footer.footer-two .footer-bottom {
+    color: white;
+    border-top: none;
+}
+
+.pb-15, .py-15 {
+    padding-bottom: 15px;
+}
+.pt-15, .py-15 {
+    padding-top: 15px;
+}
+
+.pt-30, .py-30 {
+    padding-top: 30px;
+}
+.row {
+    --bs-gutter-x: 30px;
+}
+
+.pt-10, .py-10 {
+    padding-top: 10px;
+}
+
+.main-footer.footer-two .footer-bottom .copyright-text a {
+    color: var(--secondary-color);
 }
