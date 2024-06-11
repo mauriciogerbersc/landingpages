@@ -6,12 +6,12 @@ body {
     font-family: var(--base-font);
     --base-font: 'Inter', sans-serif;
     --heading-font: 'Work Sans', sans-serif;
-    --primary-color: #ba713e;
-    --secondary-color: #cd9268;
-    --heading-color: #bc7240;
-    --base-color: #696969;
+    --primary-color: #513d20;
+    --secondary-color: #c49ba6;
+    --heading-color: #c49ba6;
+    --base-color: #FFF;
     --lighter-color: #F1F5FF;
-    --navyblue-color: #00194C;
+    --navyblue-color: #513d20;
     --border-color: rgba(1, 13, 9, 0.1);
 }
 
@@ -34,7 +34,7 @@ h1, .h1 {
 }
 
 h4, .h4 {
-    line-height: 1.4;
+    line-height: 1.1;
     font-size: 24px;
 }
 
@@ -55,6 +55,11 @@ h4, .h4 {
 
 .pb-140, .py-140 {
     padding-bottom: 140px;
+}
+
+.py-50 {
+    padding-bottom: 50px;
+    padding-top: 50px;
 }
 
 .mb-50 {
@@ -105,13 +110,13 @@ img {
 
 @media only screen and (min-width: 480px) {
     .lp-content.style-two p {
-        font-size: 18px;
+        font-size: 16px;
     }
 }
 
 .lp-content.style-two p {
-    line-height: 1.95;
-    margin-bottom: 42px;
+    line-height: 1.65;
+    margin-bottom: 15px;
 }
 
 .lp-content.style-two h1 span {
@@ -119,7 +124,15 @@ img {
     display: inline-block;
     color: var(--heading-color);
     padding: 0 8px 10px 5px;
-    background: var(--secondary-color);
+    background: var(--navyblue-color);
+}
+
+.lp-content.style-two h4 span {
+    line-height: 1;
+    display: inline-block;
+    color: var(--heading-color);
+    padding: 5px;
+    background: var(--navyblue-color);
 }
 
 .lp-form h4 {
@@ -130,7 +143,7 @@ img {
 .lp-form-bg {
     width: 90%;
     z-index: -1;
-    position: absolute;
+    position:relative;
     left: 18%;
     top: 50%;
     -webkit-transform: translateY(-50%);
@@ -139,11 +152,11 @@ img {
 }
 
 .lp-form p {
-    margin-bottom: 26px;
+    margin-bottom: 20px;
 }
 
 .lp-form {
-    padding: 60px;
+    padding: 40px;
     background: white;
     border-radius: 20px;
     -webkit-box-shadow: 0px 10px 60px 0px rgba(155, 155, 155, 0.2);
