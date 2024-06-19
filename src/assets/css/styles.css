@@ -224,6 +224,7 @@ input, select, textarea, .nice-select, .form-control {
         margin-bottom: 10px; /* Espaçamento inferior */
     }
 
+    .left h1 { text-align: center;}
     .left, .right {
         flex: 1 0 auto; /* Faz com que ocupem a largura total em telas pequenas */
         padding: 20px; /* Ajuste conforme necessário */
@@ -240,7 +241,10 @@ input, select, textarea, .nice-select, .form-control {
 
     .imagem-celular {
         display: block; /* Mostra a imagem */
+        margin: 0 auto; /* Alinha a imagem ao centro */
+        width: 70%;
         max-width: 100%; /* Garante que a imagem não ultrapasse a largura do contêiner pai */
         height: auto; /* Altura automática para manter a proporção */
+        justify-content: center;
     }
 }
