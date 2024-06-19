@@ -10,8 +10,8 @@ body {
     color: var(--primary-color);
     font-weight: 400;
     line-height: 30px;
-     font-family: var(--base-font);
-     --base-font: 'Inter', sans-serif;
+    font-family: var(--base-font);
+    --base-font: 'Inter', sans-serif;
     --heading-font: 'Work Sans', sans-serif;
     --primary-color: #ba713e;
     --secondary-color: #7a3b12;
@@ -22,34 +22,65 @@ body {
 
 /* Estiliza a barra de rolagem */
 .banner::-webkit-scrollbar {
-    width: 12px; /* Largura da barra de rolagem */
+    width: 12px;
+    /* Largura da barra de rolagem */
 }
 
 .banner::-webkit-scrollbar-track {
-    background: #f0f0f0; /* Cor do fundo da barra de rolagem */
+    background: #f0f0f0;
+    /* Cor do fundo da barra de rolagem */
 }
 
 .banner::-webkit-scrollbar-thumb {
-    background-color: #888; /* Cor da "thumb" da barra de rolagem */
-    border-radius: 10px; /* Arredonda os cantos da thumb */
-    border: 2px solid #f0f0f0; /* Cor de fundo ao redor da thumb */
+    background-color: #888;
+    /* Cor da "thumb" da barra de rolagem */
+    border-radius: 10px;
+    /* Arredonda os cantos da thumb */
+    border: 2px solid #f0f0f0;
+    /* Cor de fundo ao redor da thumb */
 }
 
 .banner::-webkit-scrollbar-thumb:hover {
-    background: #555; /* Cor da thumb ao passar o mouse */
+    background: #555;
+    /* Cor da thumb ao passar o mouse */
 }
 
 .banner {
     position: relative;
     display: flex;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     overflow: hidden;
     justify-content: center;
-    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.925), rgba(255, 220, 220, 0.877)); /* Gradiente de escurecimento */
-    
-    overflow-x: hidden; /* Previne rolagem horizontal */
-    overflow-y: auto; /* Adiciona rolagem vertical automática */
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.925), rgba(255, 220, 220, 0.877));
+    /* Gradiente de escurecimento */
+
+    overflow-x: hidden;
+    /* Previne rolagem horizontal */
+    overflow-y: auto;
+    /* Adiciona rolagem vertical automática */
+}
+
+.loader {
+    width: 48px;
+    height: 48px;
+    border: 5px solid var(--secondary-color);
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 .banner::after {
@@ -59,15 +90,19 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('../images/logo-repeat.png');/* Substitua pelo caminho real da sua imagem */
+    background-image: url('../images/logo-repeat.png');
+    /* Substitua pelo caminho real da sua imagem */
     background-repeat: repeat;
-    background-size: 30px 30px; /* Defina o tamanho da imagem de fundo */
-    background-color: rgba(255, 255, 255, 0.863); /* Adiciona uma camada semi-transparente */
+    background-size: 30px 30px;
+    /* Defina o tamanho da imagem de fundo */
+    background-color: rgba(255, 255, 255, 0.863);
+    /* Adiciona uma camada semi-transparente */
     opacity: 0.2;
     z-index: 1;
 }
 
-h1, .h1 {
+h1,
+.h1 {
     font-size: 25px;
 }
 
@@ -76,28 +111,33 @@ h1, .h1 {
     flex: 1;
     width: 100%;
     margin: auto;
-    z-index: 2; /* Certifique-se de que o conteúdo está acima do fundo */
+    z-index: 2;
+    /* Certifique-se de que o conteúdo está acima do fundo */
     position: relative;
 }
 
 .left {
-    flex: 0 0 65%; /* Ocupa 70% da largura */
+    flex: 0 0 65%;
+    /* Ocupa 70% da largura */
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 30px; /* Ajuste conforme necessário */
+    padding: 30px;
+    /* Ajuste conforme necessário */
 }
 
 .left header {
     display: flex;
     justify-content: center;
     margin-bottom: 10px;
-    max-width: 100%; /* Garante que a logo não exceda a largura do contêiner */
-    height: auto; /* Altura automática para manter a proporção */
+    max-width: 100%;
+    /* Garante que a logo não exceda a largura do contêiner */
+    height: auto;
+    /* Altura automática para manter a proporção */
 }
 
 .left header img {
-   max-width: 80%;
+    max-width: 80%;
 }
 
 
@@ -114,16 +154,19 @@ h1, .h1 {
     display: inline-block;
     color: var(--heading-color);
     text-decoration: underline;
-    text-decoration-color: var(--secondary-color); /* Cor do underline */
-    text-decoration-thickness: 1px; /* Espessura do underline */
-    text-decoration-style: solid; /* Estilo do underline (solid, dotted, dashed, etc.) */    
-   text-underline-offset: 6px; /* Ajuste o valor conforme necessário */
+    text-decoration-color: var(--secondary-color);
+    /* Cor do underline */
+    text-decoration-thickness: 1px;
+    /* Espessura do underline */
+    text-decoration-style: solid;
+    /* Estilo do underline (solid, dotted, dashed, etc.) */
+    text-underline-offset: 6px;
+    /* Ajuste o valor conforme necessário */
 }
 
 .left p {
     font-weight: 400;
-    margin-bottom: 8px;
-    font-size: 13px;
+    font-size: 18px;
     color: var(--secondary-color);  text-shadow: 1px 1px 2px rgba(85, 85, 85, 0.1); /* Sombra leve */
 }
 
@@ -141,18 +184,20 @@ h1, .h1 {
 }
 
 .right {
-    flex: 0 0 45%; /* Ocupa 30% da largura */
+    flex: 0 0 45%;
+    /* Ocupa 30% da largura */
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 20px; /* Ajuste conforme necessário */
+    padding: 20px;
+    /* Ajuste conforme necessário */
 }
 
 .right img {
     max-width: 100%;
     height: auto;
     display: block;
-   
+
 }
 
 .lp-form h2 {
@@ -160,11 +205,11 @@ h1, .h1 {
 }
 
 .lp-form p {
-    margin-bottom: 26px;
+    margin-bottom: 18px;
 }
 
 .lp-form {
-    padding: 20px;
+    padding: 10px;
     border-radius: 20px;
 }
 
@@ -180,7 +225,11 @@ h1, .h1 {
     position: relative;
 }
 
-input, select, textarea, .nice-select, .form-control {
+input,
+select,
+textarea,
+.nice-select,
+.form-control {
     width: 100%;
     height: auto;
     font-weight: 500;
@@ -190,7 +239,8 @@ input, select, textarea, .nice-select, .form-control {
     background: var(--lighter-color);
 }
 
-.theme-btn, a.theme-btn {
+.theme-btn,
+a.theme-btn {
     color: white;
     cursor: pointer;
     -webkit-transition: 0.3s;
@@ -214,8 +264,10 @@ input, select, textarea, .nice-select, .form-control {
     text-transform: capitalize;
     background-position: 100% 100%;
     background-color: var(--heading-color);
-    border: none; /* Remove a borda do botão */
-    outline: none; /* Remove o contorno do botão quando focado */
+    border: none;
+    /* Remove a borda do botão */
+    outline: none;
+    /* Remove o contorno do botão quando focado */
 }
 
 
@@ -232,14 +284,22 @@ input, select, textarea, .nice-select, .form-control {
 
     .theme-btn {
         /* Ajuste os estilos conforme necessário */
-        width: 100%; /* Largura total */
-        margin-bottom: 10px; /* Espaçamento inferior */
+        width: 100%;
+        /* Largura total */
+        margin-bottom: 10px;
+        /* Espaçamento inferior */
     }
 
-    .left h1 { text-align: center;}
-    .left, .right {
-        flex: 1 0 auto; /* Faz com que ocupem a largura total em telas pequenas */
-        padding: 20px; /* Ajuste conforme necessário */
+    .left h1 {
+        text-align: center;
+    }
+
+    .left,
+    .right {
+        flex: 1 0 auto;
+        /* Faz com que ocupem a largura total em telas pequenas */
+        padding: 20px;
+        /* Ajuste conforme necessário */
     }
 
     .right {
@@ -248,16 +308,19 @@ input, select, textarea, .nice-select, .form-control {
     }
 
     .right img {
-       display: none;
+        display: none;
     }
 
     .imagem-celular {
-        display: block; /* Mostra a imagem */
-        margin: 0 auto; /* Alinha a imagem ao centro */
+        display: block;
+        /* Mostra a imagem */
+        margin: 0 auto;
+        /* Alinha a imagem ao centro */
         width: 70%;
-        max-width: 100%; /* Garante que a imagem não ultrapasse a largura do contêiner pai */
-        height: auto; /* Altura automática para manter a proporção */
+        max-width: 100%;
+        /* Garante que a imagem não ultrapasse a largura do contêiner pai */
+        height: auto;
+        /* Altura automática para manter a proporção */
         justify-content: center;
     }
 }
-

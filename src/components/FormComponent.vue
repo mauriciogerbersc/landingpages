@@ -7,40 +7,42 @@
                 </header>
                 <h1>Venha trilhar comigo a <span>Jornada do Seu Crescimento</span></h1>
                 <img class="imagem-celular" :src="formBg">
-                <p>Oi, pessoal. <strong>Eu sou a Duda da Amorino Fios</strong>, e quero convidar você para um <strong>evento muito especial</strong> que pode <strong>transformar o seu negócio de artesanato!</strong></p>
-                <p>Minha história no mundo do artesanato começou em 2018. Comecei do zero, aprendendo passo a passo como construir um negócio de sucesso nas redes sociais. Foi uma jornada desafiadora, mas extremamente gratificante, e agora estou pronta para compartilhar todos os segredos e estratégias que aprendi ao longo do caminho.</p>
-                <p>No dia <strong>30/06/24 às 18h</strong>, vamos nos encontrar <strong>ONLINE e AO VIVO</strong> para o lançamento do curso <strong>Artesãs Digitais: a Jornada do Seu Crescimento.</strong></p>
-                <p>Este evento será uma <strong>oportunidade única</strong> para você ficar por dentro de tudo que irá acontecer, conhecer um pouco da história de pessoas muito especiais e, ainda, concorrer a uma vaga para esse curso, que poderá transformar seu Instagram em uma verdadeira vitrine de vendas, aumentar sua autoconfiança e deixar você mais próxima da liberdade financeira que sempre desejou.</p>
+                <p>Minha história no mundo do artesanato começou em 2018. Comecei do zero, aprendendo passo a passo <strong>como construir um negócio de sucesso</strong> nas redes sociais. Foi uma jornada desafiadora, mas extremamente gratificante, e agora estou pronta para <strong>compartilhar todos os segredos e estratégias</strong> que aprendi ao longo do caminho.</p>
+                <p style="margin-bottom: 0;">Este evento será uma <strong>oportunidade única para você</strong> ficar por dentro de tudo que irá acontecer, conhecer um pouco da <strong>história de pessoas muito especiais</strong> e, ainda, <strong>concorrer a uma vaga para</strong> esse curso, que poderá <strong>transformar seu Instagram</strong> em uma verdadeira vitrine de vendas, <strong>aumentar sua autoconfiança</strong> e deixar você mais próxima da <strong>liberdade financeira</strong> que sempre desejou.</p>
+                
                 <div class="section-title">
                     <h2>Inscreva-se e garanta sua vaga GRATUITA!</h2>
                 </div>
-                <p>Vamos juntos transformar seu negócio de artesanato e fazer de 2024 o ano da sua virada!</p>
+                <p>Vamos juntas transformar seu negócio de artesanato e fazer de 2024 o ano da sua virada!</p>
 
                 <p>
                     <strong>
-                📅 Data: Domingo, dia 30.06 <br>
-                🕕 Hora: 18h <br>
-                📍 Onde: ONLINE e AO VIVO</strong>
+                    📅 Data: Domingo, dia 30.06 <br>
+                    🕕 Hora: 18h <br>
+                    📍 Onde: ONLINE e AO VIVO
+                    </strong>
                 </p>
 
+                <p>Se inscreva no formulário abaixo:</p>
                 <div class="lp-form">
-                    <form>
+                    <form @submit.prevent="submitForm">
                         <div class="form-group">
-                            <input type="text" id="name" name="name" class="form-control" value=""
+                            <input type="text" v-model="name" id="name" name="name" class="form-control" value=""
                                 placeholder="Seu nome" required="">
                         </div>
                         <div class="form-group">
-                            <input type="text" id="name" name="name" class="form-control" value=""
+                            <input type="text" v-model="email" id="email" name="email" class="form-control" value=""
                                 placeholder="Seu e-mail" required="">
                         </div>
                         <div class="form-group text-center">
-                            <button v-if="!isLoading"  type="submit" class="theme-btn">[GARANTIR MINHA VAGA]</button>
-                            <div v-else class="loader">Enviando...</div>
+                            <button v-if="!isLoading"  type="submit" class="theme-btn">GARANTIR MINHA VAGA</button>
+                            <div v-else class="loader"></div>
                         </div>
                     </form>
                     
                     <div v-if="successMessage" class="success-message" v-html="successMessage"></div>
-                    <p>Estou muito animada para compartilhar tudo sobre essa jornada! Até lá! 💖</p>
+                    <div v-if="errorMessage" class="error-message" v-html="errorMessage"></div>
+                    <p> Estou muito animada para compartilhar tudo sobre essa jornada! Até lá! 💖</p>
                 </div>
             </div>
             <div class="right">
@@ -58,7 +60,6 @@ export default {
         return {
             name: '',
             email: '',
-            phone: '',
             successMessage: '',
             isLoading: false,
             formBg: require('@/assets/images/form-bg.png'),
@@ -80,16 +81,20 @@ export default {
                 await axios.post('http://localhost/api/lead', {
                     name: this.name,
                     email: this.email,
-                    phone: this.phone,
                 });
 
                 this.successMessage = "Seu interesse foi registrado com sucesso!";
                 
+                this.errorMessage = '';
                 this.name = '';
                 this.email = '';
-                this.phone = '';
             } catch (error) {
-                console.error('Erro ao cadastrar usuário:', error);
+                this.successMessage = '';
+                if (error.response && error.response.data) {
+                    this.errorMessage = error.response.data.message || 'Error submitting form';
+                } else {
+                    this.errorMessage = 'Error submitting form';
+                }
             } finally {
                 this.isLoading = false;
             }
@@ -100,10 +105,18 @@ export default {
 
 <style scoped>
 .success-message {
-  margin-top: 20px;
+  margin: 20px;
   padding: 10px;
   background-color: #d4edda;
   color: #155724;
+  border: 1px solid #c3e6cb;
+  border-radius: 5px;
+}
+.error-message {
+  margin: 20px;
+  padding: 10px;
+  background-color: #ff0000;
+  color: #c7a1a1;
   border: 1px solid #c3e6cb;
   border-radius: 5px;
 }
