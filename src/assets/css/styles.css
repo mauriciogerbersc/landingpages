@@ -1,0 +1,231 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    color: var(--primary-color);
+    font-weight: 400;
+    line-height: 30px;
+    font-size: 16px;
+     height: 100vh;
+     font-family: var(--base-font);
+     --base-font: 'Inter', sans-serif;
+    --heading-font: 'Work Sans', sans-serif;
+    --primary-color: #ba713e;
+    --secondary-color: #cf9b76;
+    --heading-color: #bc7240;
+    --base-color: #696969;
+    --lighter-color: #F1F5FF;
+}
+
+.banner {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    justify-content: center;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.925), rgba(255, 220, 220, 0.877)); /* Gradiente de escurecimento */
+
+}
+
+.banner::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/logo-repeat.png');/* Substitua pelo caminho real da sua imagem */
+    background-repeat: repeat;
+    background-size: 50px 50px; /* Defina o tamanho da imagem de fundo */
+    background-color: rgba(255, 255, 255, 0.863); /* Adiciona uma camada semi-transparente */
+    opacity: 0.3;
+    z-index: 1;
+}
+
+h1, .h1 {
+    font-size: 30px;
+}
+
+.container {
+    display: flex;
+    flex: 1;
+    width: 100%;
+    margin: auto;
+    z-index: 2; /* Certifique-se de que o conteúdo está acima do fundo */
+    position: relative;
+}
+
+.left {
+    flex: 0 0 65%; /* Ocupa 70% da largura */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px; /* Ajuste conforme necessário */
+}
+
+.left header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.left h1 {
+    width: 100%;
+    text-decoration: underline;
+    text-decoration-color: var(--secondary-color); /* Cor do underline */
+    text-decoration-thickness: 1px; /* Espessura do underline */
+    text-decoration-style: solid; /* Estilo do underline (solid, dotted, dashed, etc.) */
+    margin-bottom: 32px;
+    letter-spacing: -2.2px;
+    margin-bottom: 20px;
+    color: var(--secondary-color);
+    text-underline-offset: 6px; /* Ajuste o valor conforme necessário */
+}
+
+.left h1 span {
+    line-height: 1;
+    display: inline-block;
+    color: var(--heading-color);
+    text-decoration: underline;
+    text-decoration-color: var(--secondary-color); /* Cor do underline */
+    text-decoration-thickness: 1px; /* Espessura do underline */
+    text-decoration-style: solid; /* Estilo do underline (solid, dotted, dashed, etc.) */
+}
+
+.left p {
+    font-weight: 400;
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: var(--secondary-color);  text-shadow: 1px 1px 2px rgba(85, 85, 85, 0.1); /* Sombra leve */
+}
+
+.left form {
+    display: flex;
+    flex-direction: column;
+}
+
+.left form label {
+    margin-bottom: 5px;
+}
+
+.left form button:hover {
+    background-color: var(--secondary-color);
+}
+
+.right {
+    flex: 0 0 45%; /* Ocupa 30% da largura */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px; /* Ajuste conforme necessário */
+}
+
+.right img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+   
+}
+
+.lp-form h2 {
+    margin-bottom: 0;
+}
+
+
+.lp-form p {
+    margin-bottom: 26px;
+}
+
+.lp-form {
+    padding: 20px;
+    background: white;
+    border-radius: 20px;
+    -webkit-box-shadow: 0px 10px 60px 0px rgba(155, 155, 155, 0.2);
+    box-shadow: 0px 10px 60px 0px rgba(155, 155, 155, 0.2);
+}
+
+.section-title h2 {
+    margin-bottom: 22px;
+    letter-spacing: -0.5px;
+    text-align: center;
+    font-size: 22px;
+    
+    font-weight: 700;
+}
+
+.form-group {
+    position: relative;
+}
+
+input, select, textarea, .nice-select, .form-control {
+    width: 100%;
+    height: auto;
+    font-weight: 500;
+    padding: 20px 30px;
+    border-radius: 15px;
+    font-family: var(--heading-font);
+    background: var(--lighter-color);
+}
+
+.theme-btn, a.theme-btn {
+    color: white;
+    cursor: pointer;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    padding: 13px 25px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-radius: 20px;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    font-family: var(--heading-font);
+    text-transform: capitalize;
+    background-position: 100% 100%;
+    background-color: var(--heading-color);
+}
+
+
+input, select, textarea, .nice-select, .form-control {
+    width: 100%;
+    height: auto;
+    font-weight: 500;
+    padding: 20px;
+    border-radius: 15px;
+    font-family: var(--heading-font);
+    background: var(--lighter-color);
+    border: 1px solid var(--lighter-color);
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .left, .right {
+        flex: 1 0 auto; /* Faz com que ocupem a largura total em telas pequenas */
+        padding: 20px; /* Ajuste conforme necessário */
+    }
+
+    .right {
+        display: flex;
+        justify-content: center;
+    }
+
+    .right img {
+        max-width: 80%; /* Ajuste conforme necessário */
+    }
+}
