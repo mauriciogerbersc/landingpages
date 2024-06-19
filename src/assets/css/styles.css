@@ -71,22 +71,17 @@ h1, .h1 {
 .left header {
     display: flex;
     justify-content: center;
-    margin-bottom: 20px;
-       max-width: 100%; /* Garante que a logo não exceda a largura do contêiner */
+    margin-bottom: 10px;
+    max-width: 100%; /* Garante que a logo não exceda a largura do contêiner */
     height: auto; /* Altura automática para manter a proporção */
 }
 
 .left h1 {
     width: 100%;
-    text-decoration: underline;
-    text-decoration-color: var(--secondary-color); /* Cor do underline */
-    text-decoration-thickness: 1px; /* Espessura do underline */
-    text-decoration-style: solid; /* Estilo do underline (solid, dotted, dashed, etc.) */
     margin-bottom: 32px;
     letter-spacing: -2.2px;
     margin-bottom: 20px;
     color: var(--secondary-color);
-    text-underline-offset: 6px; /* Ajuste o valor conforme necessário */
 }
 
 .left h1 span {
@@ -97,6 +92,8 @@ h1, .h1 {
     text-decoration-color: var(--secondary-color); /* Cor do underline */
     text-decoration-thickness: 1px; /* Espessura do underline */
     text-decoration-style: solid; /* Estilo do underline (solid, dotted, dashed, etc.) */
+    
+    text-underline-offset: 6px; /* Ajuste o valor conforme necessário */
 }
 
 .left p {
@@ -209,11 +206,15 @@ input, select, textarea, .nice-select, .form-control {
     background: var(--lighter-color);
 }
 
+.imagem-celular {
+    display: none;
+}
+
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
         /* Adicionar rolagem vertical quando necessário */
-    overflow-y: auto;
+        overflow-y: auto;
         max-height: 100%;
     }
 
@@ -234,9 +235,12 @@ input, select, textarea, .nice-select, .form-control {
     }
 
     .right img {
-        position: static; /* Volta a posição estática para ocupar espaço no fluxo */
-        max-width: 100%; /* Garante que a imagem ocupe a largura disponível */
+       display: none;
+    }
+
+    .imagem-celular {
+        display: block; /* Mostra a imagem */
+        max-width: 100%; /* Garante que a imagem não ultrapasse a largura do contêiner pai */
         height: auto; /* Altura automática para manter a proporção */
-        margin-top: 20px; /* Adiciona um espaço acima da imagem */
     }
 }

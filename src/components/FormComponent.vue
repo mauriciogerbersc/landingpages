@@ -5,7 +5,8 @@
                 <header>
                     <img :src="logo" alt="Logo" class="logo">
                 </header>
-                <h1>Venha trilhar comigo <span>a Jornada do Seu Crescimento</span></h1>
+                <h1>Venha trilhar comigo a <span>Jornada do Seu Crescimento</span></h1>
+                <img class="imagem-celular" :src="formBg">
                 <p class="text-center">Minha história no mundo do artesanato começou em 2018, eu tive que aprender tudo
                     do zero como
                     construir um negócio de sucesso nas redes sociais. Agora quero te ensinar tudo que aprendi na minha
