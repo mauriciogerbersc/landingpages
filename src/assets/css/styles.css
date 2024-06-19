@@ -72,7 +72,7 @@ h1, .h1 {
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
-    max-width: 100%; /* Garante que a logo não exceda a largura do contêiner */
+       max-width: 100%; /* Garante que a logo não exceda a largura do contêiner */
     height: auto; /* Altura automática para manter a proporção */
 }
 
@@ -212,6 +212,9 @@ input, select, textarea, .nice-select, .form-control {
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
+        /* Adicionar rolagem vertical quando necessário */
+    overflow-y: auto;
+        max-height: 100%;
     }
 
     .theme-btn {
