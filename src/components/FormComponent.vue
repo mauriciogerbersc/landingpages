@@ -8,7 +8,7 @@
                 <h1>Venha trilhar comigo a <span>Jornada do Seu Crescimento</span></h1>
                 <img class="imagem-celular" :src="formBg">
                 <p>Minha história no mundo do artesanato começou em 2018. Comecei do zero, aprendendo passo a passo <strong>como construir um negócio de sucesso</strong> nas redes sociais. Foi uma jornada desafiadora, mas extremamente gratificante, e agora estou pronta para <strong>compartilhar todos os segredos e estratégias</strong> que aprendi ao longo do caminho.</p>
-                <p style="margin-bottom: 0;">Este evento será uma <strong>oportunidade única para você</strong> ficar por dentro de tudo que irá acontecer, conhecer um pouco da <strong>história de pessoas muito especiais</strong> e, ainda, <strong>concorrer a uma vaga para</strong> esse curso, que poderá <strong>transformar seu Instagram</strong> em uma verdadeira vitrine de vendas, <strong>aumentar sua autoconfiança</strong> e deixar você mais próxima da <strong>liberdade financeira</strong> que sempre desejou.</p>
+                <p style="margin-bottom: 0;">Este evento será uma <strong>oportunidade única para você</strong> ficar por dentro de tudo que irá acontecer, conhecer um pouco da <strong>história de pessoas muito especiais</strong> e, ainda, <strong>concorrer a uma vaga</strong> para esse curso, que poderá <strong>transformar seu Instagram</strong> em uma verdadeira vitrine de vendas, <strong>aumentar sua autoconfiança</strong> e deixar você mais próxima da <strong>liberdade financeira</strong> que sempre desejou.</p>
                 
                 <div class="section-title">
                     <h2>Inscreva-se e garanta sua vaga GRATUITA!</h2>
