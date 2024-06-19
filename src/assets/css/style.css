@@ -38,6 +38,8 @@ h4, .h4 {
     font-size: 24px;
 }
 
+.logo { width: 50%;}
+
 .page-wrapper {
     position: relative;
     z-index: 9;
