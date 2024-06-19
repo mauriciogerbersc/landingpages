@@ -72,6 +72,8 @@ h1, .h1 {
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
+    max-width: 100%; /* Garante que a logo não exceda a largura do contêiner */
+    height: auto; /* Altura automática para manter a proporção */
 }
 
 .left h1 {
@@ -210,6 +212,12 @@ input, select, textarea, .nice-select, .form-control {
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
+    }
+
+    .theme-btn {
+        /* Ajuste os estilos conforme necessário */
+        width: 100%; /* Largura total */
+        margin-bottom: 10px; /* Espaçamento inferior */
     }
 
     .left, .right {
