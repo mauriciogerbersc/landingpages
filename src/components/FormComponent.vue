@@ -15,7 +15,7 @@
                 </div>
                 <p>Vamos juntas transformar seu negócio de artesanato e fazer de 2024 o ano da sua virada!</p>
 
-                <p>
+                <p style="text-align: justify;">
                     <strong>
                     📅 Data: Domingo, dia 30.06 <br>
                     🕕 Hora: 18h <br>
@@ -23,7 +23,7 @@
                     </strong>
                 </p>
 
-                <p>Se inscreva no formulário abaixo:</p>
+                <p style="text-align: justify;">Se inscreva no formulário abaixo:</p>
                 <div class="lp-form">
                     <form @submit.prevent="submitForm">
                         <div class="form-group">
@@ -39,10 +39,10 @@
                             <div v-else class="loader"></div>
                         </div>
                     </form>
-                    
+                    <p style="text-align: justify; font-weight: 600;"><i class="fa-solid fa-triangle-exclamation"></i> Quer ficar por dentro de tudo e saber as novidades em primeira mão? Entre no nosso grupo de <a href="" target="_blank" class="group-whatsapp">WhatsApp</a></p>
                     <div v-if="successMessage" class="success-message" v-html="successMessage"></div>
                     <div v-if="errorMessage" class="error-message" v-html="errorMessage"></div>
-                    <p> Estou muito animada para compartilhar tudo sobre essa jornada! Até lá! 💖</p>
+                    <p style="text-align: justify;">Estou muito animada para compartilhar tudo sobre essa jornada! Até lá! 💖</p>
                 </div>
             </div>
             <div class="right">
