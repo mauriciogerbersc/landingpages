@@ -78,7 +78,7 @@ export default {
         async submitForm() {
             this.isLoading = true;
             try {
-                await axios.post('http://localhost/api/lead', {
+                await axios.post('https://terrific-respect-production.up.railway.app/api/lead', {
                     name: this.name,
                     email: this.email,
                 });
